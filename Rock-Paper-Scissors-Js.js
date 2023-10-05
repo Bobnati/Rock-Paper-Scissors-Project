@@ -101,6 +101,13 @@ function compareMoves () {
      score.losses++;
  }
 
+ console.log (computerMove);
+
+ if (result === "Computer Wins") {
+    result = "Bobnati Wins";
+ }
+
+ console.log (computerMove)
  
  updatePageScore ();
 
@@ -109,7 +116,8 @@ function compareMoves () {
     const computerScore = document.querySelector('.displayComputerScore');
     const playerScore = document.querySelector('.displayPlayerScore');
  
-    gameStats.innerHTML = `You picked <img class="render-image" src="${playerMove}-image.png">, Bobnati picked <img class="render-image" src="${computerMove}-image.png">, Result is ${result}`;
+    gameStats.innerHTML = `You picked <img class="render-image" src="${playerMove}-image.png">,
+     Bobnati picked <img class="render-image" src="${computerMove}-image.png">, Result is ${result}`;
     computerScore.innerHTML = `${score.losses}`;
     playerScore.innerHTML = `${score.wins}`;
 
