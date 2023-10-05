@@ -180,13 +180,20 @@ function displayTutorial () {
     const tutorial = document.querySelector('.tutorial');
     const hideTutorial = document.querySelector ('.hideTutorial');
 
-    tutorial.innerHTML = `Select a move by clicking each of the Rock, Paper and Scissors Buttons.
-    I will also select a move. After which the winner will be decided. 
+    tutorial.innerHTML = ` <h3 class="tutorialText"> Paper Beats Rock </h3>
+    <h3 class="tutorialText"> Scissors Beats Paper </h3>
 
-    Think you can beat Bobnati? We'll see!
+    <h3 class= "tutorialText"> Rock Beats Scissors </h3>
+
+
+    <p class= "tutorialText"> Select a move by clicking each of the Rock, Paper and Scissors Buttons.</p>
+    
+    <p class= "tutorialText"> I will also select a move. After which the winner will be decided. </p>
+
+    <h4 class= "tutorialText"> Think you can beat me? We'll see! <h4>
    `
 
-    hideTutorial.innerHTML = `<button  onclick= "hideTutorial()" > Hide Tutorial </button>`
+    hideTutorial.innerHTML = `<button class="hideTutorial"  onclick= "hideTutorial()" > Hide Tutorial </button>`
 }
 //To remove the tutorial for the page
 function hideTutorial () {
