@@ -1,5 +1,4 @@
 
-const playerName = prompt ("Enter your name");
 
 //Inherit the last score
 const lastScore = JSON.parse(localStorage.getItem("score"))
