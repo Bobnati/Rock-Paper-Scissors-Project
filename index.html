@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Bobnati's Rock Paper and Scissors Project</title>
+
+<style> 
+
+
+</style>
+
+<link href="Rock-Paper-Scissors-Css.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <h1> Welcome to the Game! </h1>
+   <button class="tutorial" onclick =" displayTutorial();"> <h2> Display tutorial </h2> </button>
+   <p class="hideTutorial"></p>
+    <div>
+       <button class="rockButton" onclick="
+        playGame('Rock')" > <img class="rock-image" src="Rock-image.png"> </button>
+<button class="paperButton" onclick="
+        playGame('Paper')"> <img class="paper-image" src="Paper-image.png"></button>
+    <button class="scissorsButton" onclick="
+        playGame('Scissors')"> <img class="scissors-image" src="Scissors-image.png"> </button>
+    </div>
+    <div>
+        <button class="autoPlayButton" onclick="autoPlay();">Auto Play</button>
+        <button class="resetButton" onclick="resetScore();">Reset Score</button>
+        <button class="resetButton" onclick = "
+        const intervalClear = autoPlay();
+        stopTheCount();"> Stop Autoplay </button>
+        <p class="displayGame"></p>
+    </div>
+
+
+<div class="forScoreAndHype">
+    <div>
+        <h1> Bobnati's Score : <p class="displayComputerScore"></p></h1> 
+
+        <h1>Your Score : <p class="displayPlayerScore"></p></h1>
+
+    </div>
+
+    <div class="forHype">
+        
+    </div>
+
+</div>
+
+  
+<script src="Rock-Paper-Scissors-Js.js"></script>
+</body>
+
+
+</html>    
