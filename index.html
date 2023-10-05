@@ -20,9 +20,9 @@
         where the fate of your fingers is in your hands!" </h4>
    <button class="tutorial" onclick =" displayTutorial();"> <h2> Display tutorial </h2> </button>
    <p class="hideTutorial"></p>
-    <div>
-       <button class="rockButton" onclick="
-        playGame('Rock')" > <img class="rock-image" src="Rock-image.png"> </button>
+    <div class="buttonsDiv">
+       <div><button class="rockButton" onclick="
+        playGame('Rock')" > <img class="rock-image" src="Rock-image.png"> </button> </div>
 <button class="paperButton" onclick="
         playGame('Paper')"> <img class="paper-image" src="Paper-image.png"></button>
     <button class="scissorsButton" onclick="
@@ -37,18 +37,22 @@
         <p class="displayGame"></p>
     </div>
 
-
-<div class="forScoreAndHype">
-    <div>
-        <h1> Bobnati's Score : <p class="displayComputerScore"></p></h1> 
-
-        <h1>Your Score : <p class="displayPlayerScore"></p></h1>
-
-    </div>
-
     <div class="forHype">
         
     </div>
+
+
+<div class="forScoreAndHype">
+    <div class="displayScores">
+        <div> <h2> Bobnati's Score : <p class="displayComputerScore"></p></h2> </div>
+
+        <div> <h2> Draws: <p class="displayDraws"></p></h2> </div>
+
+        <div><h2>Your Score : <p class="displayPlayerScore"></p></h2></div>
+
+    </div>
+
+   
 
 </div>
 

@@ -1,4 +1,6 @@
 
+const playerName = prompt ("Enter your name");
+
 //Inherit the last score
 const lastScore = JSON.parse(localStorage.getItem("score"))
 
@@ -50,7 +52,7 @@ function compareMoves () {
              result = 'Tie'
          }
          else if (computerMove === 'Paper') {
-             result = 'Computer Wins'
+             result = 'Bobnati Wins'
          }
          else if (computerMove === 'Scissors'){
              result = 'You Win'
@@ -65,13 +67,13 @@ function compareMoves () {
              result = 'Tie'
          }
          else if (computerMove === 'Scissors') {
-             result = 'Computer Wins'
+             result = 'Bobnati Wins'
          }
      }
  
      else if (playerMove === 'Scissors') {
          if (computerMove === 'Rock') {
-             result = 'Computer Wins'
+             result = 'Bobnati Wins'
          }
          else if (computerMove === 'Paper') {
              result = 'You Win'
@@ -97,15 +99,12 @@ function compareMoves () {
  score.wins++;
  }
  
- else if (result === 'Computer Wins') {
+ else if (result === 'Bobnati Wins') {
      score.losses++;
  }
 
  console.log (computerMove);
 
- if (result === "Computer Wins") {
-    result = "Bobnati Wins";
- }
 
  console.log (computerMove)
  
@@ -115,11 +114,13 @@ function compareMoves () {
     const gameStats = document.querySelector('.displayGame');
     const computerScore = document.querySelector('.displayComputerScore');
     const playerScore = document.querySelector('.displayPlayerScore');
+    const draws = document.querySelector('.displayDraws');
  
     gameStats.innerHTML = `You picked <img class="render-image" src="${playerMove}-image.png">,
      Bobnati picked <img class="render-image" src="${computerMove}-image.png">, Result is ${result}`;
     computerScore.innerHTML = `${score.losses}`;
     playerScore.innerHTML = `${score.wins}`;
+    draws.innerHTML = `${score.draws}`;
 
 
  const stringScore =  JSON.stringify(score);
@@ -220,10 +221,12 @@ function resetScore () {
     const gameStats = document.querySelector('.displayGame');
     const computerScore = document.querySelector('.displayComputerScore');
     const playerScore = document.querySelector('.displayPlayerScore');
+    const draws = document.querySelector('.displayDraws');
  
     gameStats.innerHTML = `You reset the score!`;
     computerScore.innerHTML = `${score.losses}`;
     playerScore.innerHTML = `${score.wins}`;
+    draws.innerHTML = `${score.draws}`;
     
     (localStorage.setItem("score", JSON.stringify(score)));
   
