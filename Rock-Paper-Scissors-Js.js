@@ -188,10 +188,21 @@ function displayTutorial () {
     const tutorial = document.querySelector('.tutorial');
     const hideTutorial = document.querySelector ('.hideTutorial');
 
-    tutorial.innerHTML = ` <h3 class="tutorialText"> Paper Beats Rock </h3>
-    <h3 class="tutorialText"> Scissors Beats Paper </h3>
+    tutorial.innerHTML = ` <div>
+    <h3 class="tutorialText"> Paper  <img class="tutorial-image" src="Paper-image.png">  
+    Beats
+     Rock <img class="tutorial-image" src="Rock-image.png">
+     </h3>
+    </div>
 
-    <h3 class= "tutorialText"> Rock Beats Scissors </h3>
+    <div>
+    <h3 class="tutorialText"> Scissors  <img class="tutorial-image" src="Scissors-image.png">
+     Beats Paper <img class="tutorial-image" src="Paper-image.png">  </h3>
+    </div>
+    <div>
+    <h3 class= "tutorialText"> Rock <img class="tutorial-image" src="Rock-image.png"> Beats 
+    Scissors <img class="tutorial-image" src="Scissors-image.png"> </h3>
+    <div>
 
 
     <p class= "tutorialText"> Select a move by clicking each of the Rock, Paper and Scissors Buttons.</p>
